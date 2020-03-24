@@ -1,0 +1,45 @@
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/member']">会员</a></li>
+      <li class="breadcrumb-item active" aria-current="page">登录</li>
+    </ol>
+  </nav>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">提示</h5>
+          <p class="card-text">会员实名制的投票、点赞统计有效；未实名不参与实时统计</p>
+          <a>注册登录记录中: 随意操作</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          欢迎登录
+        </div>
+        <div class="card-body">
+          <form [formGroup]="memberFormModel">
+            <div class="form-group">
+              <label for="exampleInputUsername">账号</label>
+              <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp">
+              <small id="usernameHelp" class="form-text text-muted">账号至少 5 位, 英文和数字组成.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword">密码</label>
+              <input type="password" class="form-control" id="exampleInputPassword" aria-describedby="passwordHelp">
+              <small id="passwordHelp" class="form-text text-muted">密码至少 8 位, 英文和数字组成.</small>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">记住我?</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">登录</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
